@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Student Registration Form</h1>
+    </header>
+    <main>
+      <form>
+        <label for="name" class="leftlabel">Name :</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter full name"
+        /><br />
+        <label for="fathername" class="leftlabel">Father's name :</label>
+        <input type="text" id="fathername" name="fathername" /><br />
+        <label for="mothername" class="leftlabel">Mother's name :</label>
+        <input type="text" id="mothername" name="mothername" /><br />
+        <label for="phonenumber" class="leftlabel">Phone Number :</label>
+        <input
+          type="number"
+          class="leftlabel"
+          id="phonenumber"
+          name="fathername"
+          placeholder="017xxxxxxx"
+        /><br />
+        <label for="email" class="leftlabel">Email :</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="sample@example.com"
+        /><br />
+        <label for="email" class="leftlabel">Gender :</label>
+        <input type="radio" name="Gender" value="male" />Male
+        <input type="radio" name="Gender" value="female" />Female
+        <input type="radio" name="Gender" value="others" />Others <br />
+        <label for="dob" class="leftlabel">Date Of Birth :</label>
+        <input type="date" name="dob" id="dob" /><br />
+        <label for="address" class="leftlabel">Address :</label>
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Street - House - Road"
+        />
+        <br />
+        <label for="bloodgroup" class="leftlabel">Blood Group :</label>
+        <select name="bloodgroup" id="bloodgroup">
+          <option value="apos">A+</option>
+          <option value="aneg">A-</option>
+          <option value="bpos">B+</option>
+          <option value="bneg">B-</option>
+          <option value="opos">O+</option>
+          <option value="oneg">O-</option>
+          <option value="abpos">AB+</option>
+          <option value="abneg">AB-</option>
+        </select>
+        <br />
+        <label for="department" class="leftlabel">Department :</label>
+        <input type="radio" name="department" value="cse" />CSE
+        <input type="radio" name="department" value="eee" />EEE
+        <input type="radio" name="department" value="bba" />BBA <br />
+        <label for="course" class="leftlabel"> Course :</label>
+        <input type="checkbox" id="c" name="course" value="c" />
+        <label for="c">C</label>
+        <input type="checkbox" id="c++" name="course" value="c++" />
+        <label for="c++">C++</label>
+        <input type="checkbox" id="java" name="course" value="java" />
+        <label for="java">Java</label>
+        <input type="checkbox" id="ai" name="course" value="ai" />
+        <label for="ai">AI</label>
+        <input
+          type="checkbox"
+          id="machinelearning"
+          name="course"
+          value="machinelearning"
+        />
+        <label for="machinelearning">Machine Learning</label>
+        <input type="checkbox" id="robotics" name="course" value="robotics" />
+        <label for="robotics">Robotics</label> <br />
+        <label for="photo" class="leftlabel">Photo :</label>
+        <input type="file" name="photo" id="photo" /><br />
+        <br />
+        <input type="submit" value="Submit" />
+        <input type="reset" />
+      </form>
+      <table>
+        <tr>
+          <th>SNo</th>
+          <th>Name</th>
+          <th>Phone No.</th>
+          <th>Gender</th>
+          <th>City</th>
+          <th>Hobbies</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ABC</td>
+          <td>424232323</td>
+          <td>Male</td>
+          <td>Delhi</td>
+          <td>singing</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>XYZ</td>
+          <td>76232323</td>
+          <td>Male</td>
+          <td>Mathura</td>
+          <td>Dancing</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>UVW</td>
+          <td>98232323</td>
+          <td>Female</td>
+          <td>Mumbai</td>
+          <td>Swimming</td>
+        </tr>
+      </table>
+      <div>
+        <h2>POSITION PROPERTY</h2>
+        <h3>STATIC (Normal Order of webpage)</h3>
+        <div class="box-pink"></div>
+        <div class="box-green"></div>
+        <h3>RELATIVE (The element gets positioned relative to itself)</h3>
+        <div class="box-red"></div>
+        <div class="box-black"></div>
+        <h3>ABSOLUTE (The element gets positioned relative to its parent)</h3>
+        <div class="container">
+          <div class="box-yellow"></div>
+          <div class="box-brown"></div>
+        </div>
+        <h3>FIXED (Only relative to html document)</h3>
+        <div class="container2">
+          <div class="box-violet"></div>
+          <div class="box-indigo"></div>
+        </div>
+      </div>
+      <div>
+        <h2>DISPLAY PROPERTY</h2>
+        <h3>Inline</h3>
+        <div>
+          The HyperText Markup Language or HTML is the standard markup language
+          for documents designed to be displayed in a
+          <p class="inline">web browser</p>
+          . It can be assisted by technologies such as Cascading Style Sheets
+          and scripting languages such as JavaScript.
+        </div>
+        <h2>BLOCK</h2>
+        <div>
+          The HyperText Markup Language or HTML is the standard markup language
+          for documents designed to be displayed in a
+          <p class="block">web browser</p>
+          . It can be assisted by technologies such as Cascading Style Sheets
+          and scripting languages such as JavaScript.
+        </div>
+        <h2>INLINE BLOCK</h2>
+        <div>
+          The HyperText Markup Language or HTML is the standard markup language
+          for documents designed to be displayed in a
+          <p class="inline-block">web browser</p>
+          . It can be assisted by technologies such as Cascading Style Sheets
+          and scripting languages such as JavaScript.
+        </div>
+      </div>
+      <div>
+        <h2>FLOAT PROPERTY</h2>
+        <p>WHAT IS HTML AND CSS?</p>
+        <p>
+          <img src="/Css Assignments//Assignment1/image.jpg" />HTML is the
+          language for describing the structure of Web pages. HTML gives authors
+          the means to: Publish online documents with headings, text, tables,
+          lists, photos, etc. Retrieve online information via hypertext links,
+          at the click of a button. Design forms for conducting transactions
+          with remote services, for use in searching for information, making
+          reservations, ordering products, etc. Include spread-sheets, video
+          clips, sound clips, and other applications directly in their
+          documents. With HTML, authors describe the structure of pages using
+          markup. The elements of the language label pieces of content such as
+          “paragraph,” “list,” “table,” and so on.HTML is the language for
+          describing the structure of Web pages. HTML gives authors the means
+          to: Publish online documents with headings, text, tables, lists,
+          photos, etc. Retrieve online.
+        </p>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
