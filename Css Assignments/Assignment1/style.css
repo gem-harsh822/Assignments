@@ -100,14 +100,14 @@ td {
   position: relative;
 }
 
-.box-yellow {
+.box-blue {
   position: absolute;
   background: rgb(0, 13, 255);
   height: 100px;
   width: 100px;
   right: 5px;
 }
-.box-brown {
+.box-lightgreen {
   background: rgb(40, 189, 35);
   height: 100px;
   width: 100px;
