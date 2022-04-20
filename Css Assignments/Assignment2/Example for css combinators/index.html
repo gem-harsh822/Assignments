@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Combinators</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toprow">
+      <div class="col">
+        <h1>Descendant selector (>)</h1>
+        <h3>
+          -> Selects all paragraph elements inside the parent div element.
+        </h3>
+        <div class="descendantselector">
+          <p>
+            Paragraph 1: Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Pariatur cupiditate laudantium a labore magni eaque ab unde
+            voluptas deleniti! Voluptate est illo pariatur minima enim
+            voluptatum similique ex beatae commodi corrupti dolor veritatis
+            eveniet doloremque.
+          </p>
+          <p>
+            Paragraph 2: Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Pariatur cupiditate laudantium a labore magni eaque ab unde
+            voluptas deleniti! Voluptate est illo pariatur minima enim
+            voluptatum similique ex beatae commodi corrupti dolor veritatis
+            eveniet doloremque.
+          </p>
+        </div>
+        <p>
+          Paragraph 3. It will not be affected because it is not in the div.
+        </p>
+      </div>
+      <div class="childselector col">
+        <h1>Child selector (>)</h1>
+        <h3>
+          -> Selects all paragraph elements where the parent is a div element.
+        </h3>
+        <p>
+          Paragraph 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Pariatur cupiditate laudantium a labore magni eaque ab unde voluptas
+          deleniti! Voluptate est illo pariatur minima enim voluptatum similique
+          ex beatae commodi corrupti dolor veritatis eveniet doloremque.
+        </p>
+        <h4>it is a heading</h4>
+        <p>
+          Paragraph 2: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Pariatur cupiditate laudantium a labore magni eaque ab unde voluptas
+          deleniti! Voluptate est illo pariatur minima enim voluptatum similique
+          ex beatae commodi corrupti dolor veritatis eveniet doloremque.
+        </p>
+        <span>It is not a pargraph it is a span.</span>
+      </div>
+    </div>
+    <div class="toprow">
+      <div class="adjacetsiblingselector col">
+        <h1>Adjacent sibling selector (+)</h1>
+        <h3>
+          -> Selects the first paragraph element that are placed immediately
+          after selected heading elements.
+        </h3>
+        <h4 class="parentheading">This is parent heading element.</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corporis
+          quo possimus voluptatibus modi neque, tempora eos velit optio sapiente
+          magnam mollitia, qui veritatis nihil officia esse sunt ab cumque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corporis
+          quo possimus voluptatibus modi neque, tempora eos velit optio sapiente
+          magnam mollitia, qui veritatis nihil officia esse sunt ab cumque.
+        </p>
+        <h4 class="parentheading">This is parent heading element.</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corporis
+          quo possimus voluptatibus modi neque, tempora eos velit optio sapiente
+          magnam mollitia, qui veritatis nihil officia esse sunt ab cumque.
+        </p>
+      </div>
+      <div class="col">
+        <h1>General Sibling Selector (~)</h1>
+        <h3>
+          -> Selects all the sibling elements of an selected element that comes
+          after the selected element.
+        </h3>
+        <p>
+          Pragraph 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Deleniti nostrum fugit omnis placeat esse hic, repellat et doloribus
+          suscipit iure aliquam labore.
+        </p>
+        <p>
+          Pragraph 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Deleniti nostrum fugit omnis placeat esse hic, repellat et doloribus
+          suscipit iure aliquam labore.
+        </p>
+        <div class="siblingselector">This is a div.</div>
+        <p>
+          Pragraph 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Deleniti nostrum fugit omnis placeat esse hic, repellat et doloribus
+          suscipit iure aliquam labore.
+        </p>
+        <p>
+          Pragraph 4: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Deleniti nostrum fugit omnis placeat esse hic, repellat et doloribus
+          suscipit iure aliquam labore.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

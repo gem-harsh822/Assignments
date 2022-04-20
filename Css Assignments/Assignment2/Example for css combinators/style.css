@@ -1,0 +1,23 @@
+.toprow {
+  display: flex;
+  height: 50%;
+}
+.col {
+  flex: 1;
+
+  padding: 1em;
+  border: solid;
+}
+.descendantselector p {
+  color: red;
+  text-align: justify;
+}
+.childselector > p {
+  color: red;
+}
+.parentheading + p {
+  color: red;
+}
+.siblingselector ~ p {
+  color: red;
+}
