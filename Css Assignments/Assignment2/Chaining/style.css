@@ -1,0 +1,31 @@
+#heading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container1 p {
+  border: 2px solid black;
+}
+
+body .container1 .para1 {
+  color: red;
+}
+
+body .container1 #para2 {
+  color: rgb(60, 23, 207);
+}
+
+.container2 #para3 {
+  color: rgb(43, 187, 21);
+  margin-left: 70px;
+  margin-right: 60px;
+  margin-top: 50px;
+}
+
+.container2 #para4 {
+  color: rgb(244, 11, 11);
+  margin-left: 70px;
+  margin-right: 60px;
+  margin-top: 50px;
+}
