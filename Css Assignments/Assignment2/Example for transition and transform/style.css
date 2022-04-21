@@ -1,0 +1,102 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  width: 50%;
+  height: 50%;
+  float: left;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#div1 {
+  background: #ddd;
+}
+
+#div2 {
+  background: #aaa;
+}
+
+#div3 {
+  background: #777;
+}
+
+#div4 {
+  background: #444;
+}
+.container1 {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* text-align: center; */
+  padding: 30px;
+  background-color: red;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  /* margin: 50px; */
+}
+.container1:hover {
+  transform: rotate(360deg);
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+}
+.container2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  padding: 30px;
+  background-color: rgb(225, 255, 0);
+  border-radius: 30px;
+  cursor: pointer;
+  /* height: 30px; */
+  transition: all 1s ease-in-out;
+}
+.container2:hover {
+  transform: scale(1.5);
+}
+.container3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  padding: 30px;
+  background-color: rgb(225, 255, 0);
+  border-radius: 30px;
+  cursor: pointer;
+  /* height: 30px; */
+  transition: all 1s ease-in-out;
+}
+.container3:hover {
+  transform: skew(20deg, 10deg);
+}
+.container4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  padding: 30px;
+  background-color: red;
+  border-radius: 30px;
+  cursor: pointer;
+  /* height: 30px; */
+  transition: all 1s ease-in-out;
+}
+.container4:hover {
+  transform: matrix(1, 2, -1, 1, 80, 80);
+}
