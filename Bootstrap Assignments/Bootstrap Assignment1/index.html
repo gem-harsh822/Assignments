@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col">
+        <div class="col-6">
           <h1>Form</h1>
         </div>
-        <div class="col">
+        <div class="col-6">
           <h1>Table</h1>
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col-6">
           <form>
             <div class="form-group row">
               <label for="inputname" class="col-3 col-form-label">Name :</label>
@@ -70,7 +70,7 @@
               >
               <div class="col-9">
                 <input
-                  type="tel"
+                  type="number"
                   class="form-control"
                   id="phonenumber"
                   placeholder="Phone number"
@@ -93,14 +93,14 @@
             <div class="form-group row">
               <label for="gender" class="col-3 col-form-label">Gender :</label>
               <div class="col-9">
-                <label class="radio-inline">
-                  <input type="radio" name="male" id="gender" checked />Male
+                <label for="male" class="radio-inline">
+                  <input type="radio" name="gender" id="male" checked />Male
                 </label>
-                <label class="radio-inline">
-                  <input type="radio" name="female" id="gender" />Female
+                <label for="female" class="radio-inline">
+                  <input type="radio" name="gender" id="female" />Female
                 </label>
-                <label class="radio-inline">
-                  <input type="radio" name="others" id="gender" />Others
+                <label for="others" class="radio-inline">
+                  <input type="radio" name="gender" id="others" />Others
                 </label>
               </div>
             </div>
@@ -153,14 +153,14 @@
                 >Department :</label
               >
               <div class="col-9">
-                <label class="radio-inline">
-                  <input type="radio" name="cse" id="department" checked />CSE
+                <label for="cse" class="radio-inline">
+                  <input type="radio" name="department" id="cse" checked />CSE
                 </label>
-                <label class="radio-inline">
-                  <input type="radio" name="eee" id="department" />EEE
+                <label class="radio-inline" for="eee">
+                  <input type="radio" name="department" id="eee" />EEE
                 </label>
-                <label class="radio-inline">
-                  <input type="radio" name="bba" id="department" />BBA
+                <label class="radio-inline" for="bba">
+                  <input type="radio" name="department" id="bba" />BBA
                 </label>
               </div>
             </div>
@@ -205,7 +205,7 @@
             </div>
           </form>
         </div>
-        <div class="col">
+        <div class="col-6">
           <table class="table">
             <thead>
               <tr>
