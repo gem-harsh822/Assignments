@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(183, 244, 229);
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -18,3 +21,4 @@ h1 {
 .check-inline {
   padding: 0px 5px;
 }
+
