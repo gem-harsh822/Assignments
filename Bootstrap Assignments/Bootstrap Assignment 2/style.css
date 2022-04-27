@@ -1,6 +1,10 @@
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-a , .btn{
+a,
+.btn , h1{
   color: #264a9f !important;
+}
+.shadow {
+    box-shadow: 7px 7px 6px #d3d3d3 !important;
 }
