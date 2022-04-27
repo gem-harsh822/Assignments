@@ -2,20 +2,43 @@
   font-family: "Poppins", sans-serif;
 }
 a,
-.btn , h1{
+h1,
+h3 {
   color: #264a9f !important;
 }
 .shadow {
   box-shadow: 3px 3px 6px #bfc3cf, -3px -3px 6px #fff !important;
-  border:none;
+  border: none;
 }
-.form-control , .form-select {
+label {
+  color: #7A86A3;
+}
+input , select , input::-webkit-input-placeholder , select::-webkit-input-placeholder{
+  text-indent: 10px;
+  font-size: 13px !important;
+}
+.form-control,
+.form-select {
+  color: #7A86A3;
   border-radius: 20px;
   box-shadow: inset 3px 3px 6px #bfc3cf, inset -3px -3px 6px #ffffff;
-  background-color: #ECEDF1;
+  background-color: #ecedf1;
 }
-input[type=password]:active, input[type=password]:focus {
-  background-color: #ECEDF1;
+.form-control:focus,
+.form-select:focus {
+  background-color: #ecedf1;
   box-shadow: inset 4px 4px 6px #bfc3cf, inset -4px -4px 6px #ffffff;
   border: none;
+}
+
+.proceed_button {
+  background: transparent
+    linear-gradient(276deg, rgba(13, 53, 148, 0.898039), #35d3e1) 0 0 no-repeat
+    padding-box;
+  border: none;
+  padding: 0.6% 6%;
+}
+.proceed_para {
+  font-size: x-small;
+  margin-left: 15px;
 }

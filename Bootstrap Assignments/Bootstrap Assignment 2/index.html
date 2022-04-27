@@ -103,7 +103,7 @@
               <button
                 type="button"
                 class="shadow btn ps-4 pe-4 rounded-pill btn-light"
-                style="background-color: #e8e9ed"
+                style="background-color: #e8e9ed ; color: #264a9f"
               >
                 <span
                   ><img
@@ -140,42 +140,170 @@
           Get associated with Tata AIG by sharing few of the contact details to
           get back:
         </div>
-        <form action="" class="mt-4 p-4" style="background-color: #ECEDF1; box-shadow: 3px 3px 6px #bfc3cf, -3px -3px 6px #fff !important;
+        <form action="" class="mt-4 p-5" style="background-color: #ECEDF1; box-shadow: 3px 3px 6px #bfc3cf, -3px -3px 6px #fff !important;
   border:none; border-radius: 8px;" >
-          <h1>Details Required</h1>
-          <div class="row">
-            <div class="col-12 col-sm-4">
+          <h3>Details Required</h3>
+          <div class="row ">
+            <div class="col-12 col-sm-4 mt-4">
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <select class="form-select" aria-label="Default select example">
+                <label for="title">Title</label>
+                <select id="title" class="form-select p-2 input_color" aria-label="Default select example">
                   <option value="mr" class="op">Mr.</option>
                   <option value="ms" class="op">Ms.</option>
                 </select>
               </div>
             </div>
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-sm-4 mt-4">
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label for="firstname">First Name</label>
                 <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                  placeholder="Password"
+                  type="text"
+                  class="form-control p-2"
+                  id="firstname"
+                  placeholder="First Name"
                 />
               </div>
             </div>
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-sm-4 mt-4">
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label for="lastname">Last Name</label>
                 <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                  placeholder="Password"
+                  type="text"
+                  class="form-control p-2"
+                  id="lastname"
+                  placeholder="Last Name"
                 />
               </div>
             </div>
           </div>
+          <div class="row ">
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="phoneno">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control p-2"
+                  id="phoneno"
+                  placeholder="Phone Number"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="alternatemobilno">Alternate Mobile Number</label>
+                <input
+                  type="tel"
+                  class="form-control p-2"
+                  id="alternatemobilno"
+                  placeholder="Mobile Number"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group ">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control p-2"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group ">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  class="form-control p-2"
+                  id="city"
+                  placeholder="City"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" class="form-select p-2 input_color" aria-label="Default select example" >
+                  <option value="" disabled selected>Select</option>
+                  <option value="mr" class="op">Mr.</option>
+                  <option value="ms" class="op">Ms.</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="state">New To Industry</label>
+                <select id="state" class="form-select p-2 input_color" aria-label="Default select example" >
+                  <option value="" disabled selected>Select</option>
+                  <option value="yes" >Yes</option>
+                  <option value="ms" >No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group ">
+                <label for="currentcompany">Current Company Working With</label>
+                <input
+                  type="text"
+                  class="form-control p-2"
+                  id="currentcompany"
+                  placeholder="Current Company"
+                />
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="jobtype">Job Type</label>
+                <select id="jobtype" class="form-select p-2 input_color" aria-label="Default select example" >
+                  <option value="" disabled selected>Select</option>
+                  <option value="full time" class="op">Full Time</option>
+                  <option value="part time" class="op">Part Time</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="areyouassociatedwith">Are You Associated With</label>
+                <select id="jobtype" class="form-select p-2 input_color" aria-label="Default select example" >
+                  <option value="" disabled selected>Select</option>
+                  <option value="mutual fund" class="op">Mutual Fund</option>
+                  <option value="life insurance" class="op">Life Insurance</option>
+                  <option value="genral insurance" class="op">General Insurance</option>
+                </select>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="lineofbusiness">Line Of Business</label>
+                <select id="lineofbusiness" class="form-select p-2 input_color" aria-label="Default select example" >
+                  <option value="" disabled selected>Travel</option>
+                  <option value="mutual fund" class="op">Motor</option>
+                  <option value="life insurance" class="op">Life Insurance</option>
+                  <option value="genral insurance" class="op">General Insurance</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 mt-4">
+              <div class="form-group">
+                <label for="areyouassociatedwith">Annual Business Potential</label>
+                <select id="jobtype" class="form-select p-2 input_color" aria-label="Default select example" >
+                  <option value="" disabled selected>Select</option>
+                  <option value="mutual fund" class="op">Mutual Fund</option>
+                  <option value="life insurance" class="op">Life Insurance</option>
+                  <option value="genral insurance" class="op">General Insurance</option>
+                </select>
+              </div>
+            </div>
+            
+          </div>
+          <button type="button" class="btn mt-5 btn-primary  rounded-pill proceed_button">Proceed</button>
+          <p class="proceed_para">By clicking proceed, I agree to override my DNCR</p>
         </form>
       </div>
     </div>
