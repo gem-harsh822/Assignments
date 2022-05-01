@@ -1,14 +1,41 @@
 (function () {
-  var c = 0; 
+  var c = 0;
   var data = new Array();
-  data.push(["Name", "Age", "DOB","Email","Company"]);
-  data.push(["Harsh", 21, "15/04/2001","abc@gmail.com","XYZ"]);
-  data.push(["sdfgfs", 42, "25/04/2001","abc@gmail.com","XYZ"]);
-  data.push(["Harsh", 21, "15/04/2001","abc@gmail.com","XYZ"]);
-  data.push(["Harsh", 21, "15/04/2001","abc@gmail.com","XYZ"]);
-  data.push(["Harsh", 21, "15/04/2001","abc@gmail.com","XYZ"]);
+  data.push(["Name", "Age", "DOB", "Email", "Company"]);
+  data.push(["Harsh", 21, "15/04/2001", "abc@gmail.com", "XYZ"]);
+  data.push(["sdfgfs", 42, "25/06/2001", "ttc@gmail.com", "XYZ"]);
+  data.push(["kv", 26, "17/04/1999", "cdf@gmail.com", "XYZ"]);
+  data.push(["dfj", 10, "23/12/2021", "xyz@gmail.com", "XYZ"]);
+  data.push(["uiod", 11, "11/08/2010", "iusd@gmail.com", "Xdfs"]);
   var table = document.createElement("table");
-  for (var i = 0; i < 6; i++) {
+  table.setAttribute("class", "table table-striped");
+  var tHead = document.createElement("thead");
+  tHead.setAttribute("class", "table-dark");
+  var tr = document.createElement("tr");
+  var th1 = document.createElement("th");
+  var th2 = document.createElement("th");
+  var th3 = document.createElement("th");
+  var th4 = document.createElement("th");
+  var th5 = document.createElement("th"); 
+  var text1 = document.createTextNode(data[0][0]);
+  var text2 = document.createTextNode(data[0][1]);
+  var text3 = document.createTextNode(data[0][2]);
+  var text4 = document.createTextNode(data[0][3]);
+  var text5 = document.createTextNode(data[0][4]);
+  th1.appendChild(text1);
+  th2.appendChild(text2);
+  th3.appendChild(text3);
+  th4.appendChild(text4);
+  th5.appendChild(text5);
+  tr.appendChild(th1);
+  tr.appendChild(th2);
+  tr.appendChild(th3);
+  tr.appendChild(th4);
+  tr.appendChild(th5);
+  tHead.appendChild(tr);
+  table.appendChild(tHead);
+  var tBody = document.createElement("tbody");
+  for (var i = 1; i < 6; i++) {
     var tr = document.createElement("tr");
     var td1 = document.createElement("td");
     var td2 = document.createElement("td");
@@ -30,7 +57,8 @@
     tr.appendChild(td3);
     tr.appendChild(td4);
     tr.appendChild(td5);
-    table.appendChild(tr);
+    tBody.appendChild(tr);
+    table.appendChild(tBody);
   }
   document.body.appendChild(table);
 })();
