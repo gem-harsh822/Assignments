@@ -3,7 +3,7 @@ var isNameValid,
   isMobileNoValid;
 var serialNo = 1;
 var nameInput, emailInput, mobileNoInput;
-var regexForName = /^[A-Za-z]+$/;
+var regexForName = /^([a-zA-Z]+|[a-zA-Z]+\s{1}[a-zA-Z]{1,}|[a-zA-Z]+\s{1}[a-zA-Z]{3,}\s{1}[a-zA-Z]{1,})$/i;
 var regexForEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var regexForMobileNo = /^\d{10}$/;
 function util(event) {
@@ -44,47 +44,47 @@ function validateForm() {
     document.getElementById("invalid-mobileno").style.display = "block";
     document.getElementById("valid-mobileno").style.display = "none";
   }
-  console.log()(
-    nameInput +
-      " " +
-      emailInput +
-      " " +
-      mobileNoInput +
-      " " +
-      isEmailValid +
-      " " +
-      isMobileNoValid +
-      " " +
-      isNameValid
-  );
+//   console.log(
+//     nameInput +
+//       " " +
+//       emailInput +
+//       " " +
+//       mobileNoInput +
+//       " " +
+//       isEmailValid +
+//       " " +
+//       isMobileNoValid +
+//       " " +
+//       isNameValid
+//   );
   if (isNameValid && isEmailValid && isMobileNoValid) {
     localStorage.setItem(serialNo + "name", nameInput);
     localStorage.setItem(serialNo + "email", emailInput);
     localStorage.setItem(serialNo + "mobileno", mobileNoInput);
-    // console.log(localStorage.getItem());
+    displayTable()
+  }
+}
+function displayTable() {
     var table = document.getElementById("table-body");
+    var tHead = document.getElementById("table-head");
     let row = document.createElement("tr");
-    console.log(localStorage);
+    if(serialNo == 1) {
+      let head = document.createElement("tr");
+      head.innerHTML = `<tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Number</th>
+    </tr>`;
+    tHead.append(head);
+    }
+    // console.log(localStorage);
     row.innerHTML = `<tr>
-    <th scope="row">${serialNo}</th>
+    <th scope="row">${serialNo+"."}</th>
     <td>${localStorage.getItem(serialNo + "name")}</td>
     <td>${localStorage.getItem(serialNo + "email")}</td>
-    <td>${localStorage.getItem(serialNo + "number")}</td>
+    <td>${localStorage.getItem(serialNo + "mobileno")===null?"":localStorage.getItem(serialNo + "mobileno")}</td>
   </tr>`;
     table.append(row);
     serialNo++;
-  }
 }
-// function displayTable() {
-//   var table = document.getElementById("table-body");
-//   let row = document.createElement("tr");
-//   console.log(localStorage);
-//   row.innerHTML = `<tr>
-//     <th scope="row">${serialNo}</th>
-//     <td>${localStorage.getItem(serialNo + "name")}</td>
-//     <td>${localStorage.getItem(serialNo + "email")}</td>
-//     <td>${localStorage.getItem(serialNo + "number")}</td>
-//   </tr>`;
-//   table.append(row);
-//   serialNo++;
-// }
