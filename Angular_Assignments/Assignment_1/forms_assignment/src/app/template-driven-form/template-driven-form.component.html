@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="row">
+  <div class="row my-4">
     <div class="col">
-      <form #form="ngForm" (ngSubmit)="onSubmit(form)">
-        {{ form.value | json }}
+        <h1 class="text-center text-danger">Form</h1>
+      <form #form="ngForm" (ngSubmit)="onSubmit(form); form.resetForm()">
+        <!-- {{ form.value | json }} -->
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input
@@ -39,6 +40,7 @@
             [(ngModel)]="userModel.cgpa"
             name="cgpa"
             [class.is-invalid]="cgpa.invalid && cgpa.touched"
+            pattern="^[1]|([0-9]\.\d?\d?)|[9].[0]$"
             required
           />
         </div>
@@ -58,38 +60,77 @@
         <div class="mb-3">
           <label for="dateofjoining" class="form-label">Date of joining</label>
           <input
+            #doj="ngModel"
             type="date"
             class="form-control"
             id="dateofjoining"
             [(ngModel)]="userModel.dateOfJoining"
             name="dateofjoining"
+            [class.is-invalid]="doj.invalid && doj.touched"
+            required
           />
         </div>
         <div class="mb-3">
           <label for="skills" class="form-label">Skills</label>
           <input
+            #skills="ngModel"
             type="text"
             class="form-control"
             id="skills"
             [(ngModel)]="userModel.skills"
             name="skills"
+            [class.is-invalid]="skills.invalid && skills.touched"
+            required
           />
         </div>
         <div class="mb-3">
           <label for="resume" class="form-label">Upload Resume:</label>
           <input
+            #resume="ngModel"
             type="file"
             class="form-control"
             id="resume"
             [(ngModel)]="userModel.resume"
             name="resume"
+            accept="application/pdf"
+            [class.is-invalid]="resume.invalid && resume.touched"
+            required
           />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div >
+          <button type="submit" class="btn btn-success" >Submit</button>
+          <input class="btn btn-danger ms-4" type="reset" value="Reset" />
+        </div>
       </form>
     </div>
     <div class="col">
-        
+        <h1 class="text-center text-danger">Table</h1>
+      <table class="table table-primary table-striped table-bordered mt-4">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">College</th>
+            <th scope="col">CGPA</th>
+            <th scope="col" class="text-wrap">Year of passing</th>
+            <th scope="col">Date of joining</th>
+            <th scope="col">Skills</th>
+            <!-- <th scope="col">Resume</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; index as i" scope="row">
+            <td>{{ i + 1 }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.college }}</td>
+            <td>{{ user.cgpa }}</td>
+            <td>{{ user.yearOfPassing }}</td>
+            <td>{{ user.dateOfJoining }}</td>
+            <td>{{ user.skills }}</td>
+            <!-- <td>{{ user.resume }}</td> -->
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

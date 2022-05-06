@@ -2,7 +2,7 @@ export class User {
     constructor(
         public name:string,
         public college:string,
-        public cgpa:number,
+        public cgpa:any,
         public yearOfPassing:any,
         public dateOfJoining:any,
         public skills:string,

@@ -7,13 +7,21 @@ import { User } from '../user';
 })
 export class TemplateDrivenFormComponent implements OnInit {
   // model:form = new User();
-  userModel = new User("","",0,null,null,"",3);
-  
+  userModel = new User("","",'',null,null,"",'');
+  // public isSubmitted = false;
+  public isValid = false;
   users: User[] = [];
   onSubmit(form:any) {
-    console.log(form.value);
-    this.users.push(this.userModel);
-    this.userModel = new User("","",0,null,null,"",3);
+    // console.log(form);
+    if(form.valid)  {
+      this.users.push(this.userModel);
+    }
+    else {
+      alert("Please fill the form correctly");
+    }
+    // console.log(this.users);
+    this.userModel = new User("","",'',null,null,"",'');
+    form.reset();
   }
   constructor() {  }
 
