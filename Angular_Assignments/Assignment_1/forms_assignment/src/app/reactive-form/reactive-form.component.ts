@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,FormBuilder ,Validators} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup,FormBuilder ,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -26,7 +26,6 @@ export class ReactiveFormComponent {
   onSubmit() {
     this.submitted = true;
  
-    // stop the process here if form is invalid
     if (this.registerForm.invalid) {
       return;
     }
@@ -38,7 +37,6 @@ export class ReactiveFormComponent {
       this.users = JSON.parse(localStorage.getItem('users') || ''); 
       this.users.push(this.registerForm.value);
       localStorage.setItem("users",JSON.stringify(this.users));
-        // Strinf JSON.parse(localStorage.getItem("users")).push(this.registerForm.value);
     }
     localStorage.setItem("users",JSON.stringify(this.users));
     // console.log(this.registerForm.value);
