@@ -5,6 +5,7 @@ import { ReactiveLoginFormComponent } from './reactive-login-form/reactive-login
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 const routes: Routes = [
+  {path:'',component:TemplateDrivenFormComponent},
   {path:'registration',component:TemplateDrivenFormComponent},
   {path:'signup',component:ReactiveFormComponent},
   {path:"login",component:ReactiveLoginFormComponent}

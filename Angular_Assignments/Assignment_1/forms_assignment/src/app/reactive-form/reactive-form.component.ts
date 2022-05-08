@@ -1,13 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,FormBuilder ,Validators} from '@angular/forms';
 
-// interface User {
-//   name: string;
-//   nickname: string;
-//   email: string;
-//   password: string;
-//   showPassword: boolean;
-// }
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -37,7 +30,17 @@ export class ReactiveFormComponent {
     if (this.registerForm.invalid) {
       return;
     }
-    this.users.push(this.registerForm.value);
+    if (localStorage.getItem("users") === null) {
+      this.users.push(this.registerForm.value);
+      localStorage.setItem("users",JSON.stringify(this.users));
+    }
+    else {
+      this.users = JSON.parse(localStorage.getItem('users') || ''); 
+      this.users.push(this.registerForm.value);
+      localStorage.setItem("users",JSON.stringify(this.users));
+        // Strinf JSON.parse(localStorage.getItem("users")).push(this.registerForm.value);
+    }
+    localStorage.setItem("users",JSON.stringify(this.users));
     // console.log(this.registerForm.value);
     this.submitted = false;
     this.registerForm.reset();
