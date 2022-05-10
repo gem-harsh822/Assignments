@@ -12,7 +12,7 @@ export class ReactiveFormComponent {
   submitted = false;
   users: FormGroup[] = [];
   constructor(private formBuilder: FormBuilder) {}
- 
+  arr:any;
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -22,7 +22,11 @@ export class ReactiveFormComponent {
       mobilenumber: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]]  
     });
   }
- 
+
+  fetchData() {
+    this.arr = localStorage.getItem('users')===null?[]:JSON.parse(localStorage.getItem('users')||'null');
+
+  }
   onSubmit() {
     this.submitted = true;
  
