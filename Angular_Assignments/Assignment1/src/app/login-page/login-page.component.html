@@ -1,48 +1,58 @@
-<div class="container mt-5">
+<div class="container-fluid pt-5">
   <div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-      <div class="card border-0 shadow rounded-3 my-5">
+      <div
+        class="card border-0 shadow rounded-5 my-5"
+        style="background-color: lightgray"
+      >
         <div class="card-body p-4 p-sm-5">
           <h2 class="card-title text-center mb-5">Sign In</h2>
-          <form #form="loginForm" (ngSubmit)="onSubmit()">
+          <form #form="ngForm" (ngSubmit)="onSubmit(form)">
             <div class="form-floating mb-3">
               <input
                 type="text"
+                #name="ngModel"
                 class="form-control"
                 id="username"
-                placeholder="name@example.com"
+                placeholder="Username"
+                [(ngModel)]="loginUserModel.name"
+                name="name"
+                required
               />
               <label for="username">Username</label>
+              <span
+                class="text-danger"
+                *ngIf="(form.submitted || name.touched) && name.invalid"
+              >
+                Please enter an username.
+              </span>
             </div>
             <div class="form-floating mb-3">
               <input
+                [(ngModel)]="loginUserModel.password"
                 #password="ngModel"
-                name = "password"
+                name="password"
                 type="password"
                 class="form-control"
                 id="password"
                 placeholder="Password"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                required
               />
               <label for="password">Password</label>
-            </div>
-
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="rememberPasswordCheck"
-              />
-              <label class="form-check-label" for="rememberPasswordCheck">
-                Remember password
-              </label>
+              <span
+                class="text-danger"
+                *ngIf="(form.submitted || password.touched) && password.invalid"
+              >
+                Please enter valid password.
+              </span>
             </div>
             <div class="d-grid">
               <button
                 class="btn btn-primary btn-login text-uppercase fw-bold"
                 type="submit"
               >
-                Sign in
+                Login
               </button>
             </div>
           </form>
