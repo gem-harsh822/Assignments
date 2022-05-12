@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MainViewComponent } from './main-view/main-view.component';
 import { FlightDetailsCardComponent } from './flight-details-card/flight-details-card.component';
+import { PayFlightFeeComponent } from './pay-flight-fee/pay-flight-fee.component';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { FlightDetailsCardComponent } from './flight-details-card/flight-details
     MainViewComponent,
     routingComponents,
     FlightDetailsCardComponent,
+    PayFlightFeeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

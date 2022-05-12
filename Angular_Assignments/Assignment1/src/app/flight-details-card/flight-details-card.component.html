@@ -1,45 +1,45 @@
+
 <div class="card mx-2 my-2" *ngFor="let flightDetail of flightDetails">
     <div class="card-body bg-white rounded" >
         <div class="container-fluid d-flex">
-            <img [src] = "flightDetail.FlightLogo" width="30" height="30" />
-            <h6 class="card-title ms-3 mt-1">{{flightDetail.FlightName}}</h6>
+            <img src='{{ "assets/images/" + flightDetail.FlightLogo }}'  width="30" height="30" />
+            <h6 class="card-title ms-3 mt-1" style="color: 	#808080;">{{flightDetail.FlightName}}</h6>
         </div>
         <div class="container-fluid">
             <div class="mt-2 row">
                 <div class="col">
                     <p class="mb-1">
-                        <span style="font-weight: bold">DEL </span><span style="font-size: smaller">New Delhi,
-                            India</span>
+                        <span style="font-weight: bold">{{flightDetail.FromShort}}</span><span style="font-size: smaller; color: #808080;">{{flightDetail.FromLong}}</span>
                     </p>
-                    <h4>17:45</h4>
+                    <h4>{{flightDetail.DepartureTime}}</h4>
                 </div>
                 <div class="col">
-                    <p class="mb-1">.</p>
-                    <h4 class="">2h 20m</h4>
+                    <p class="mb-1">&nbsp;</p>
+                    <h4 class="">{{flightDetail.TimeTaken}}</h4>
                 </div>
                 <div class="col">
                     <p class="mb-1">
-                        <span style="font-weight: bold">BOM </span><span style="font-size: smaller">Mumbai, India</span>
+                        <span style="font-weight: bold">{{flightDetail.ToShort}}</span><span style="font-size: smaller; color: #808080;">{{flightDetail.ToLong}}</span>
                     </p>
-                    <h4>20:05</h4>
+                    <h4>{{flightDetail.ArrivalTime}}</h4>
                 </div>
                 <div class="col d-flex">
                     <div class="ms-auto">
-                        <p class="mb-1">.</p>
-                        <h3 style="padding-left: 100px" class="mb-0">₹6,253</h3>
+                        <p class="mb-1">&nbsp;</p>
+                        <h3 style="padding-left: 100px" class="mb-0">{{(flightDetail.TicketPrice) | currency: 'INR' :'symbol':'4.0' }}</h3>
                         <p>
-                            No Cost EMI from <span style="font-weight: bold">₹2,085</span>
+                            No Cost EMI from <span style="font-weight: bold">{{(flightDetail.EmiPrice) | currency: 'INR' :'symbol':'4.0' }}</span>
                         </p>
                     </div>
                     <div class="ms-3 pt-1">
-                        <button class="btn btn-danger btn-lg py-2 px-4 btn-block mt-4">
+                        <button class="btn btn-danger btn-lg py-2 px-4 btn-block mt-4" >
                             BOOK
                         </button>
                     </div>
                 </div>
                 <div class="d-flex my-0">
                     <p class="text-primary">Partially Refundable</p>
-                    <p class="ms-auto text-primary fw-bold"><a href="" style="text-decoration: none;">Flight Details <i
+                    <p class="ms-auto text-primary fw-bold"><a href="" style="text-decoration: none;" >Flight Details <i
                                 class="fa-solid fa-angle-down"></i></a></p>
                 </div>
             </div>
