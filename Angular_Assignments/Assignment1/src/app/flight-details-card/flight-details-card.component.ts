@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { PayFlightFeeComponent } from '../pay-flight-fee/pay-flight-fee.component';
-import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
-
+import { Component } from '@angular/core';
+import { MDBModalRef } from 'ng-uikit-pro-standard';
+import { FlightDetailsPopupComponent } from '../flight-details-popup/flight-details-popup.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-flight-details-card',
   templateUrl: './flight-details-card.component.html',
   styleUrls: ['./flight-details-card.component.css'],
 })
-export class FlightDetailsCardComponent implements OnInit {
+export class FlightDetailsCardComponent {
+  
   flightDetails = [
     {
+      id: '1',
       FlightLogo: 'vistaraLogo.png',
       FlightName: 'Vistara',
       FromShort: 'DEL ',
@@ -23,6 +25,7 @@ export class FlightDetailsCardComponent implements OnInit {
       EmiPrice: '2085',
     },
     {
+      id: '2',
       FlightLogo: 'spicejetLogo.png',
       FlightName: 'Spicejet',
       FromShort: 'DEL ',
@@ -36,6 +39,7 @@ export class FlightDetailsCardComponent implements OnInit {
       EmiPrice: '2592',
     },
     {
+      id: '3',
       FlightLogo: 'spicejetLogo.png',
       FlightName: 'Spicejet',
       FromShort: 'DEL ',
@@ -49,15 +53,10 @@ export class FlightDetailsCardComponent implements OnInit {
       EmiPrice: '2592',
     },
   ];
-  modalRef: MdbModalRef<PayFlightFeeComponent> | null = null;
-  
-  // constructor(private modalService: MdbModalService) {}
-  ngOnInit(): void {}
-  // onClick(idx:any) {
-  //   console.log(idx);
-    
-  // }
-  openModal() {
-    // this.modalRef = this.modalService.open(PayFlightFeeComponent)
-  }
+  modalRef: MDBModalRef | null = null;
+  constructor(private modalService: NgbModal) {}
+  openModal(idx:any) {
+    const modalRef = this.modalService.open(FlightDetailsPopupComponent);
+    modalRef.componentInstance.selectedFlightDetails = this.flightDetails[idx-1];
+    }
 }

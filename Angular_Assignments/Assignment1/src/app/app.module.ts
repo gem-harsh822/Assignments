@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MainViewComponent } from './main-view/main-view.component';
 import { FlightDetailsCardComponent } from './flight-details-card/flight-details-card.component';
-import { PayFlightFeeComponent } from './pay-flight-fee/pay-flight-fee.component';
-
-
+import { FlightDetailsPopupComponent } from './flight-details-popup/flight-details-popup.component';
+import { MDBBootstrapModulesPro, MDBModalRef } from 'ng-uikit-pro-standard';
+import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+import { MdbModalRef, MdbModalModule  } from 'mdb-angular-ui-kit/modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,10 +17,11 @@ import { PayFlightFeeComponent } from './pay-flight-fee/pay-flight-fee.component
     MainViewComponent,
     routingComponents,
     FlightDetailsCardComponent,
-    PayFlightFeeComponent,
+    FlightDetailsPopupComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,MdbModalModule,MDBBootstrapModulesPro.forRoot() ],
+  entryComponents: [ FlightDetailsPopupComponent ],
+  providers: [MDBSpinningPreloader,MDBModalRef],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

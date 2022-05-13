@@ -1,0 +1,35 @@
+<div class="modal-header">
+  <h4 class="modal-title">Hi there!</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="d-flex">
+    <p>Hello, {{ selectedFlightDetails.FlightName }}!</p>
+    <img
+      src="{{ 'assets/images/' + selectedFlightDetails.FlightLogo }}"
+      width="30"
+      height="30"
+    />
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="activeModal.close('Close click')"
+    >
+      Close
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="activeModal.close('Ok click')"
+    >
+      Ok
+    </button>
+  </div>
+</div>
