@@ -1,63 +1,60 @@
-<div class="container-fluid pt-5">
+<div class="container">
   <div class="row">
-    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-      <div
-        class="card border-0 shadow rounded-5 my-5"
-        style="background-color: lightgray"
-      >
-        <div class="card-body p-4 p-sm-5">
-          <h2 class="card-title text-center mb-5">Sign In</h2>
-          <form #form="ngForm" (ngSubmit)="onSubmit(form)">
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                #name="ngModel"
-                class="form-control"
-                id="username"
-                placeholder="Username"
-                [(ngModel)]="loginUserModel.name"
-                name="name"
-                required
-              />
-              <label for="username">Username</label>
-              <span
-                class="text-danger"
-                *ngIf="(form.submitted || name.touched) && name.invalid"
-              >
-                Please enter an username.
-              </span>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                [(ngModel)]="loginUserModel.password"
-                #password="ngModel"
-                name="password"
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="Password"
-                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
-                required
-              />
-              <label for="password">Password</label>
-              <span
-                class="text-danger"
-                *ngIf="(form.submitted || password.touched) && password.invalid"
-              >
-                Please enter valid password.
-              </span>
-            </div>
-            <div class="d-grid">
-              <button
-                class="btn btn-primary btn-login text-uppercase fw-bold"
-                type="submit"
-              >
-                Login
-              </button>
-            </div>
-          </form>
-        </div>
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center text-dark mt-3">Login Form</h2>
+      <div class="card my-5">
+        <form class="card-body cardbody-color p-lg-5" #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <div class="text-center">
+            <img src="assets/images/profilePic.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+              width="200px" alt="profile">
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              #name="ngModel"
+              class="form-control"
+              id="username"
+              placeholder="Username"
+              [(ngModel)]="loginUserModel.name"
+              name="name"
+              required
+            />
+            <label for="username">Username</label>
+            <span
+              class="text-danger"
+              *ngIf="(form.submitted || name.touched) && name.invalid"
+            >
+              Please enter an username.
+            </span>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              [(ngModel)]="loginUserModel.password"
+              #password="ngModel"
+              name="password"
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+              required
+            />
+            <label for="password">Password</label>
+            <span
+              class="text-danger"
+              *ngIf="(form.submitted || password.touched) && password.invalid"
+            >
+              Please enter valid password.
+            </span>
+          </div>
+          <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+          <!-- <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
+            Registered? <a href="#" class="text-dark fw-bold"> Create an
+              Account</a>
+          </div> -->
+        </form>
       </div>
+
     </div>
   </div>
 </div>
