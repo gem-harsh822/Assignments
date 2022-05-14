@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h4 class="modal-title">Hi there!</h4>
+  <h4 class="modal-title w-100 text-center">Flight details</h4>
   <button
     type="button"
     class="btn-close"
@@ -8,28 +8,64 @@
   ></button>
 </div>
 <div class="modal-body">
-  <div class="d-flex">
+  <img
+      src="{{ 'assets/images/' + selectedFlightDetails.FlightLogo }}"
+      width="100"
+      height="100"
+      class="img-thumbnail mx-auto d-block mb-3"
+    />
+  <div class="row">
+    <div class="col-4">
+      <h6>Flight name :</h6>
+    </div>
+    <div class="col float-start">{{ selectedFlightDetails.FlightName }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>From :</h6></div>
+    <div class="col">{{selectedFlightDetails.FromShort}}{{selectedFlightDetails.FromLong}}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>To :</h6></div>
+    <div class="col">{{selectedFlightDetails.ToShort}}{{selectedFlightDetails.ToLong}}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Departure time :</h6></div>
+    <div class="col">{{ selectedFlightDetails.DepartureTime }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Arrival time :</h6></div>
+    <div class="col">{{ selectedFlightDetails.ArrivalTime }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Total time :</h6></div>
+    <div class="col">{{ selectedFlightDetails.TimeTaken }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Ticket price :</h6></div>
+    <div class="col fw-bolder text-success">{{(selectedFlightDetails.TicketPrice) | currency: 'INR' :'symbol':'4.0' }}</div>
+  </div>
+  <!-- <div class="d-flex">
     <p>Hello, {{ selectedFlightDetails.FlightName }}!</p>
     <img
       src="{{ 'assets/images/' + selectedFlightDetails.FlightLogo }}"
       width="30"
       height="30"
     />
-  </div>
+  </div> -->
   <div class="modal-footer">
     <button
       type="button"
       class="btn btn-outline-dark"
       (click)="activeModal.close('Close click')"
     >
-      Close
+      Cancel
     </button>
     <button
       type="button"
-      class="btn btn-danger"
+      class="btn btn-success"
       (click)="activeModal.close('Ok click')"
     >
-      Ok
+      Proceed to pay
     </button>
   </div>
 </div>

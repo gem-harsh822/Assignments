@@ -8,4 +8,7 @@
 a {
     text-decoration: none;
     color: black;
-  }
+}
+.active{
+  color: rgb(0, 94, 255);
+}

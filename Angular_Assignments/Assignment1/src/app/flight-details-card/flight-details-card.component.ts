@@ -53,6 +53,23 @@ export class FlightDetailsCardComponent {
       EmiPrice: '2592',
     },
   ];
+  public asc:any;
+  sortJson(value : number) {
+    // alert(value);
+    this.asc=!this.asc;
+    if(value === 1) {
+      this.asc ? this.flightDetails.sort((a, b) => (a.DepartureTime > b.DepartureTime) ? 1 : -1) : this.flightDetails.sort((a, b) => (a.DepartureTime > b.DepartureTime) ? -1 : 1);
+    }
+    else if(value === 2) {
+      this.asc ? this.flightDetails.sort((a, b) => (a.TimeTaken > b.TimeTaken) ? 1 : -1) : this.flightDetails.sort((a, b) => (a.TimeTaken > b.TimeTaken) ? -1 : 1);
+    }
+    else if(value === 3) {
+      this.asc ? this.flightDetails.sort((a, b) => (a.ArrivalTime > b.ArrivalTime) ? 1 : -1) : this.flightDetails.sort((a, b) => (a.ArrivalTime > b.ArrivalTime) ? -1 : 1);
+    }
+    else if(value === 4) {
+      this.asc ? this.flightDetails.sort((a, b) => (a.TicketPrice > b.TicketPrice) ? 1 : -1) : this.flightDetails.sort((a, b) => (a.TicketPrice > b.TicketPrice) ? -1 : 1);
+    }
+  }
   modalRef: MDBModalRef | null = null;
   constructor(private modalService: NgbModal) {}
   openModal(idx:any) {

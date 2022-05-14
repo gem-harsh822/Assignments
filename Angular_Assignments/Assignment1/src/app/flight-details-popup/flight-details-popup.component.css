@@ -1,0 +1,8 @@
+.img-thumbnail {
+    background-color: white !important;
+    border: 1px solid grey !important;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px !important;
+}
+
+/* b6b6b1e7 */

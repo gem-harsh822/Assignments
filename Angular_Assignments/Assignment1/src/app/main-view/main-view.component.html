@@ -2,14 +2,43 @@
   <div class="container-fluid px-2">
     <p>Sort By</p>
     <div class="container-fluid bg-white rounded">
-      <div class="row text-center py-1 ">
-        <div class="col"><a type="button" href="http://" style="font-weight: 500;">DEPARTURE</a></div>
-        <div class="col"><a href="http://" style="font-weight: 500;">DURATION</a></div>
-        <div class="col"><a href="http://" style="font-weight: 500;">ARRIVAL</a></div>
-        <div class="col"><a href="http://" style="font-weight: 500;">PRICE</a></div>
+      <div class="row text-center py-1">
+        <div class="col">
+          <a
+            type="button"
+            style="font-weight: 500"
+            (click)="callMyChild(1)"
+            [class.active]="num === 1"
+            >DEPARTURE ⇅</a>
+        </div>
+        <div class="col">
+          <a
+            type="button"
+            style="font-weight: 500"
+            (click)="callMyChild(2)"
+            [class.active]="num === 2"
+            >DURATION ⇅</a>
+        </div>
+        <div class="col">
+          <a
+            type="button"
+            style="font-weight: 500"
+            (click)="callMyChild(3)"
+            [class.active]="num === 3"
+            >ARRIVAL ⇅</a 
+          >
+        </div>
+        <div class="col">
+          <a
+            type="button"
+            style="font-weight: 500"
+            (click)="callMyChild(4)"
+            [class.active]="num === 4"
+            >PRICE ⇅</a
+          >
+        </div>
       </div>
     </div>
   </div>
   <app-flight-details-card></app-flight-details-card>
 </div>
-
