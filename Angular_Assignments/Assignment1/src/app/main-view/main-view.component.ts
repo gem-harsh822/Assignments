@@ -6,7 +6,7 @@ import { FlightDetailsCardComponent } from '../flight-details-card/flight-detail
   styleUrls: ['./main-view.component.css']
 })
 export class MainViewComponent implements OnInit {
-  @ViewChild(FlightDetailsCardComponent, {static : true}) child! : FlightDetailsCardComponent;
+  @ViewChild(FlightDetailsCardComponent, {static : true}) child! : FlightDetailsCardComponent; 
   public num:any;
   callMyChild(type:any){
     this.num = type;

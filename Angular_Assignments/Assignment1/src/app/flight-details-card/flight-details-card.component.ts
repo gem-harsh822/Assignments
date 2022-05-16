@@ -72,8 +72,9 @@ export class FlightDetailsCardComponent {
   }
   modalRef: MDBModalRef | null = null;
   constructor(private modalService: NgbModal) {}
-  openModal(idx:any) {
+  openModal(flightDetail:any) {
+    // console.log(idx);
     const modalRef = this.modalService.open(FlightDetailsPopupComponent);
-    modalRef.componentInstance.selectedFlightDetails = this.flightDetails[idx-1];
-    }
+    modalRef.componentInstance.selectedFlightDetails = flightDetail;
+  }
 }
