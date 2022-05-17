@@ -10,6 +10,7 @@ import { FlightDetailsPopupComponent } from './flight-details-popup/flight-detai
 import { MDBBootstrapModulesPro, MDBModalRef } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 import { MdbModalRef, MdbModalModule  } from 'mdb-angular-ui-kit/modal';
+import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { MdbModalRef, MdbModalModule  } from 'mdb-angular-ui-kit/modal';
     routingComponents,
     FlightDetailsCardComponent,
     FlightDetailsPopupComponent,
+    ThankYouPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule,MdbModalModule,MDBBootstrapModulesPro.forRoot() ],
   entryComponents: [ FlightDetailsPopupComponent ],
