@@ -17,7 +17,7 @@ export class MainViewComponent implements OnInit {
   {
     Date:"10 Oct 2020",
     Time:"10:24 AM",
-    Amount:"3000",
+    Amount:"250",
     TransactionType:"pay",
     TransactionId:"A342344366563464536456",
     IsRequested:true,
@@ -25,7 +25,7 @@ export class MainViewComponent implements OnInit {
   {
     Date:"19 Oct 2020",
     Time:"10:24 AM",
-    Amount:"3000",
+    Amount:"250",
     TransactionType:"collect",
     TransactionId:"A342344366563464536456",
     IsRequested:false,
@@ -33,7 +33,7 @@ export class MainViewComponent implements OnInit {
   {
     Date:"19 Oct 2020",
     Time:"10:24 AM",
-    Amount:"3000",
+    Amount:"250",
     TransactionType:"collect",
     TransactionId:"A342344366563464536456",
     IsRequested:true,

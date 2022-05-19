@@ -19,7 +19,7 @@
       *ngIf="TransactionDetail.TransactionType === 'pay'"
     >
       <div class="d-flex justify-content-between">
-        <h1>{{ TransactionDetail.Amount | currency: "INR":"symbol":"4.0" }}</h1>
+        <h1>{{ TransactionDetail.Amount.length === 4 ? (TransactionDetail.Amount | currency: "INR":"symbol":"4.0"):(TransactionDetail.Amount | currency: "INR":"symbol":"3.0") }}</h1>
         <div class="my-auto">
           <span>{{ TransactionDetail.IsRequested ? "🔗" : "✔️" }}</span
           > You<span>{{
@@ -43,7 +43,7 @@
       *ngIf="TransactionDetail.TransactionType === 'collect'"
     >
       <div class="d-flex justify-content-between">
-        <h1>{{ TransactionDetail.Amount | currency: "INR":"symbol":"4.0" }}</h1>
+        <h1>{{ TransactionDetail.Amount.length === 4 ? (TransactionDetail.Amount | currency: "INR":"symbol":"4.0"):(TransactionDetail.Amount | currency: "INR":"symbol":"3.0") }}</h1>
         <div class="my-auto">
           <span>{{ TransactionDetail.IsRequested ? "🔗" : "✔️" }}</span>{{
             TransactionDetail.IsRequested ? " Request" : " You"
