@@ -39,6 +39,16 @@ export class MainViewComponent implements OnInit {
     IsRequested:true,
   }
 ];
+ public dates = new Set<string>();
+ isAlreadyPresent(date:any) {
+  if(this.dates.has(date)) {
+    return true;
+  }
+  else {
+    this.dates.add(date);
+    return false;
+  }
+}
   constructor() { }
 
   ngOnInit(): void {
